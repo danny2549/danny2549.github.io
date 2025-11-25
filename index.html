@@ -1,9 +1,538 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Your SEO Guy</title>
+  <meta charset="UTF-8" />
+  <title>Your SEO Guy | Freelance SEO That Drives Leads</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Freelance SEO focused on strategy, clean implementation, and qualified leads.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --accent: #5b3cff;
+      --accent-soft: #f4f3ff;
+      --border: #e5e7eb;
+      --card: #f9fafb;
+      --radius: 10px;
+      --max-width: 960px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    header, main, footer {
+      width: 100%;
+    }
+
+    .shell {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.75rem 1.25rem;
+    }
+
+    /* NAV */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      background: var(--accent-soft);
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 3rem 1.25rem 2.5rem;
+      text-align: left;
+    }
+
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      font-size: 0.85rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      line-height: 1.1;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      max-width: 620px;
+      color: var(--muted);
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-bullets {
+      display: grid;
+      gap: 0.35rem;
+      margin-bottom: 1.75rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .hero-bullets span {
+      color: var(--accent);
+      margin-right: 0.35rem;
+      font-size: 1.05rem;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-secondary-link {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .btn-secondary-link strong {
+      color: var(--text);
+    }
+
+    .full-width {
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* SECTIONS */
+    section {
+      border-top: 1px solid var(--border);
+      background: var(--bg);
+    }
+
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .section-kicker {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .section-sub {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 620px;
+      margin-bottom: 1.75rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .card {
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 1.2rem 1.1rem;
+      background: var(--card);
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .card p {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 0.55rem;
+    }
+
+    .list-check {
+      display: grid;
+      gap: 0.3rem;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .list-check li {
+      list-style: none;
+    }
+
+    .list-check li::before {
+      content: "✔";
+      color: var(--accent);
+      margin-right: 0.35rem;
+    }
+
+    .fit-list {
+      display: grid;
+      gap: 0.4rem;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .fit-list li {
+      list-style: none;
+    }
+
+    .fit-list li::before {
+      content: "•";
+      margin-right: 0.35rem;
+      color: var(--accent);
+    }
+
+    /* CONTACT / REACH OUT */
+    .contact-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-card {
+      max-width: 520px;
+      padding: 1.5rem 1.4rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    .contact-header {
+      max-width: 640px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .field label {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .field input,
+    .field textarea {
+      padding: 0.55rem 0.6rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+      font-family: inherit;
+    }
+
+    .field textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .help-text {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.75rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hey, I’m Your SEO Guy. Site coming soon.</h1>
+
+<header>
+  <div class="shell nav">
+    <div class="brand">
+      YOUR<span>SEO</span>GUY
+    </div>
+    <a class="nav-cta" href="#reach-out">
+      Reach Out
+    </a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Senior-level SEO</div>
+      <h1>Smart strategy. Clean execution. <span>Real leads.</span></h1>
+      <p class="hero-sub">
+        Freelance SEO support for teams who want clear strategy, clean implementation,
+        and more qualified opportunities from search.
+      </p>
+
+      <div class="hero-bullets">
+        <div><span>■</span> Strategy that connects rankings to revenue—not vanity metrics.</div>
+        <div><span>■</span> Technical cleanup, content, and analytics in one cohesive plan.</div>
+        <div><span>■</span> A single senior partner you can actually talk to.</div>
+      </div>
+
+      <div class="hero-cta-row">
+        <a class="btn-primary" href="#reach-out">Reach Out</a>
+        <div class="btn-secondary-link">
+          Or <strong>see how I work</strong> below.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section>
+    <div class="section-inner">
+      <div class="section-kicker">What I do</div>
+      <h2 class="section-title">SEO that connects traffic to pipeline</h2>
+      <p class="section-sub">
+        I work with companies that already have something working—paid, outbound, word-of-mouth—
+        and want search to become a reliable, compounding channel instead of a black box.
+      </p>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="pill">Strategy</div>
+          <h3>SEO & growth roadmap</h3>
+          <p>
+            Clear, prioritized plans for what to fix, what to build, and what to ignore.
+            Built around your actual business model, not cookie-cutter checklists.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="pill">Technical</div>
+          <h3>Technical SEO & site health</h3>
+          <p>
+            Crawling, indexation, site speed, internal links, and error cleanup so search engines
+            can actually see—and trust—your site.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="pill">Content</div>
+          <h3>Content & on-page optimization</h3>
+          <p>
+            Pages and content that match real search intent, answer real questions,
+            and move visitors toward contact, demo, or quote requests.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="pill">Analytics</div>
+          <h3>Reporting that makes sense</h3>
+          <p>
+            Tracking, dashboards, and regular reviews that explain what’s working,
+            what’s not, and what we’re testing next.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW I WORK -->
+  <section>
+    <div class="section-inner">
+      <div class="section-kicker">How I work</div>
+      <h2 class="section-title">Big-agency thinking. One senior operator.</h2>
+      <p class="section-sub">
+        Think of me as a part-time SEO lead—not another “set it and forget it” vendor.
+        I plug into your existing marketing and sales efforts, then identify where search can
+        actually move the needle.
+      </p>
+
+      <div class="grid grid-2">
+        <div>
+          <ul class="list-check">
+            <li>Deep dive into your site, analytics, and search performance.</li>
+            <li>Clear plan for technical fixes, content, and landing pages.</li>
+            <li>Work directly with your team or devs to implement changes.</li>
+            <li>Regular check-ins focused on leads and pipeline, not just clicks.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Who I’m a good fit for</h3>
+          <ul class="fit-list">
+            <li>Teams that care about quality leads, not just more traffic.</li>
+            <li>Companies that can act on recommendations and want a partner, not a task rabbit.</li>
+            <li>B2B, technical, or service-based businesses where expertise matters.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REACH OUT -->
+  <section id="reach-out">
+    <div class="section-inner contact-section">
+      <div class="contact-header">
+        <div class="section-kicker">Start a conversation</div>
+        <h2 class="section-title">Let’s see if we’re a good fit</h2>
+        <p class="section-sub">
+          I get a lot of outreach (don’t we all?)—this quick form helps me separate real project
+          inquiries from spammy sales pitches.
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <form action="mailto:danny@imyourseoguy.com" method="post" enctype="text/plain">
+          <div class="field">
+            <label for="name">Name *</label>
+            <input id="name" name="Name" required />
+          </div>
+
+          <div class="field">
+            <label for="company">Company *</label>
+            <input id="company" name="Company" required />
+          </div>
+
+          <div class="field">
+            <label for="work-email">Work Email *</label>
+            <input id="work-email" name="Work Email" type="email" required />
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone *</label>
+            <input id="phone" name="Phone" required />
+          </div>
+
+          <div class="field">
+            <label for="website">Website *</label>
+            <input id="website" name="Website" required />
+          </div>
+
+          <div class="field">
+            <label for="heard">How did you hear about me? *</label>
+            <input id="heard" name="How did you hear about me?" required />
+          </div>
+
+          <div class="field">
+            <label for="looking-for">What are you looking for? *</label>
+            <textarea id="looking-for" name="What are you looking for?" required></textarea>
+          </div>
+
+          <button class="btn-primary full-width" type="submit">Submit</button>
+
+          <p class="help-text">
+            This opens your email client with your answers pre-filled. If you’d rather not use the form,
+            email me directly at
+            <a href="mailto:danny@imyourseoguy.com">danny@imyourseoguy.com</a>.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Your SEO Guy. All rights reserved.</div>
+    <div>Based online. Working with clients wherever good search traffic lives.</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
