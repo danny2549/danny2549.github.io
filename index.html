@@ -291,36 +291,10 @@
       max-width: 640px;
     }
 
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .field label {
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-
-    .field input,
-    .field textarea {
-      padding: 0.55rem 0.6rem;
-      border-radius: 6px;
-      border: 1px solid var(--border);
-      font-size: 0.9rem;
-      font-family: inherit;
-    }
-
-    .field textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
     .help-text {
       font-size: 0.8rem;
       color: var(--muted);
-      margin-top: 0.75rem;
+      margin-top: 1rem;
     }
 
     footer {
@@ -445,94 +419,3 @@
           <ul class="list-check">
             <li>Deep dive into your site, analytics, and search performance.</li>
             <li>Clear plan for technical fixes, content, and landing pages.</li>
-            <li>Work directly with your team or devs to implement changes.</li>
-            <li>Regular check-ins focused on leads and pipeline, not just clicks.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Who I’m a good fit for</h3>
-          <ul class="fit-list">
-            <li>Teams that care about quality leads, not just more traffic.</li>
-            <li>Companies that can act on recommendations and want a partner, not a task rabbit.</li>
-            <li>B2B, technical, or service-based businesses where expertise matters.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REACH OUT -->
-  <section id="reach-out">
-    <div class="section-inner contact-section">
-      <div class="contact-header">
-        <div class="section-kicker">Start a conversation</div>
-        <h2 class="section-title">Let’s see if we’re a good fit</h2>
-        <p class="section-sub">
-          I get a lot of outreach (don’t we all?)—this quick form helps me separate real project
-          inquiries from spammy sales pitches.
-        </p>
-      </div>
-
-      <div class="contact-card">
-        <form action="mailto:danny@imyourseoguy.com" method="post" enctype="text/plain">
-          <div class="field">
-            <label for="name">Name *</label>
-            <input id="name" name="Name" required />
-          </div>
-
-          <div class="field">
-            <label for="company">Company *</label>
-            <input id="company" name="Company" required />
-          </div>
-
-          <div class="field">
-            <label for="work-email">Work Email *</label>
-            <input id="work-email" name="Work Email" type="email" required />
-          </div>
-
-          <div class="field">
-            <label for="phone">Phone *</label>
-            <input id="phone" name="Phone" required />
-          </div>
-
-          <div class="field">
-            <label for="website">Website *</label>
-            <input id="website" name="Website" required />
-          </div>
-
-          <div class="field">
-            <label for="heard">How did you hear about me? *</label>
-            <input id="heard" name="How did you hear about me?" required />
-          </div>
-
-          <div class="field">
-            <label for="looking-for">What are you looking for? *</label>
-            <textarea id="looking-for" name="What are you looking for?" required></textarea>
-          </div>
-
-          <button class="btn-primary full-width" type="submit">Submit</button>
-
-          <p class="help-text">
-            This opens your email client with your answers pre-filled. If you’d rather not use the form,
-            email me directly at
-            <a href="mailto:danny@imyourseoguy.com">danny@imyourseoguy.com</a>.
-          </p>
-        </form>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="footer-inner">
-    <div>© <span id="year"></span> Your SEO Guy. All rights reserved.</div>
-    <div>Based online. Working with clients wherever good search traffic lives.</div>
-  </div>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-</body>
-</html>
