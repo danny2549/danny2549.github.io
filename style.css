@@ -163,20 +163,6 @@ header nav a:focus-visible {
   background: #1d4ed8;
 }
 
-/* Hero secondary column placeholder (can be used for bullets, summary, etc.) */
-
-#hero > :last-child {
-  padding: 1.5rem 1.6rem;
-  border-radius: var(--radius-xl);
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-soft);
-}
-
-#hero > :last-child p {
-  margin-bottom: 0.4rem;
-}
-
 /* Sections */
 
 section {
@@ -240,8 +226,14 @@ section > p {
 
 /* Work */
 
-#work > div {
-  margin-top: 1.1rem;
+#work .work-grid {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+#work .work-grid > div {
   padding: 1.2rem 1.3rem;
   border-radius: var(--radius-lg);
   background: var(--bg-alt);
@@ -349,15 +341,6 @@ html {
   header nav {
     justify-content: center;
     gap: 1.25rem;
-  }
-
-  #hero {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 2rem;
-  }
-
-  #hero > :last-child {
-    order: -1;
   }
 
   section {
