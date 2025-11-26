@@ -10,6 +10,8 @@
   --radius-lg: 18px;
   --radius-xl: 26px;
   --max-width: 1040px;
+  --section-padding: 3rem;
+  --hero-padding-top: 4rem;
 }
 
 /* Global */
@@ -65,8 +67,9 @@ body > header,
 body > section,
 body > footer {
   max-width: var(--max-width);
-  margin: 0.4rem auto;
+  margin: 0 auto;
   padding: 0 1.5rem;
+  width: 100%;
 }
 
 .section-card {
@@ -121,7 +124,7 @@ header nav a:focus-visible {
 /* Hero */
 
 #hero {
-  padding: 4.5rem 0 3rem;
+  padding: var(--hero-padding-top) 0 var(--section-padding);
 }
 
 #hero .section-card {
@@ -180,7 +183,7 @@ header nav a:focus-visible {
 /* Sections */
 
 section {
-  padding: 2.75rem 0;
+  padding: var(--section-padding) 0;
 }
 
 section:not(#hero) {
