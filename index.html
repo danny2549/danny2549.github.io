@@ -2,452 +2,1438 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Your SEO Guy | Freelance SEO That Drives Leads</title>
+  <title>I'm Your SEO Guy | Technical & Local SEO for Businesses</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Freelance SEO focused on strategy, clean implementation, and qualified leads.">
+  <meta
+    name="description"
+    content="Technical SEO, local SEO, and SEO audits for local businesses and ecommerce brands. No fluff, just fixes that move revenue."
+  />
+
+  <!-- Basic styling: system fonts, minimal CSS for speed -->
   <style>
     :root {
-      --bg: #ffffff;
-      --text: #111827;
-      --muted: #6b7280;
-      --accent: #5b3cff;
-      --accent-soft: #f4f3ff;
-      --border: #e5e7eb;
-      --card: #f9fafb;
-      --radius: 10px;
-      --max-width: 960px;
+      --bg-dark: #050816;
+      --bg-darker: #02000b;
+      --bg-light: #0b1020;
+      --accent: #22c55e;
+      --accent-soft: rgba(34, 197, 94, 0.12);
+      --accent-alt: #38bdf8;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-subtle: #111827;
+      --error: #f97373;
+      --success: #22c55e;
+      --radius-lg: 12px;
+      --radius-full: 999px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.7);
+      --shadow-subtle: 0 10px 30px rgba(15, 23, 42, 0.6);
+      --max-width: 1120px;
+      --transition-fast: 150ms ease-out;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+      scroll-behavior: smooth;
+    }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #020617 0, #02000b 45%, #000 100%);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
     }
 
-    a { color: var(--accent); text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-    header, main, footer { width: 100%; }
+    main {
+      padding-bottom: 4rem;
+    }
 
-    .shell {
+    .page-wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .inner {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 1.75rem 1.25rem;
+      padding: 0 1.25rem;
     }
 
-    /* NAV */
-    .nav {
+    /* Header / Nav */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+        to bottom,
+        rgba(2, 6, 23, 0.95),
+        rgba(2, 6, 23, 0.7),
+        transparent
+      );
+      border-bottom: 1px solid rgba(15, 23, 42, 0.85);
+    }
+
+    .nav-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 0.9rem 0;
       gap: 1rem;
-      margin-bottom: 2rem;
     }
 
-    .brand {
-      font-weight: 700;
-      font-size: 1.15rem;
+    .brand-lockup {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 30%;
+      background: conic-gradient(
+        from 180deg at 50% 50%,
+        #22c55e,
+        #38bdf8,
+        #a855f7,
+        #22c55e
+      );
+      position: relative;
+      box-shadow: 0 6px 20px rgba(34, 197, 94, 0.6);
+      overflow: hidden;
+    }
+
+    .brand-mark::after {
+      content: "SEO";
+      position: absolute;
+      inset: 3px;
+      border-radius: 22%;
+      background: radial-gradient(circle at top left, #020617 0, #020617 40%, #000 100%);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.05rem;
+    }
+
+    .brand-text span:first-child {
+      font-weight: 650;
       letter-spacing: 0.08em;
+      font-size: 0.85rem;
       text-transform: uppercase;
     }
 
-    .brand span { color: var(--accent); }
+    .brand-text span:last-child {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 0.1rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(to right, var(--accent), var(--accent-alt));
+      transition: width var(--transition-fast);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
 
     .nav-cta {
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      padding: 0.5rem 0.9rem;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      background: var(--accent-soft);
-      font-size: 0.9rem;
+      padding: 0.45rem 0.95rem;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(34, 197, 94, 0.6);
+      background: radial-gradient(circle at top left, #22c55e1f 0, #020617 55%);
+      color: #bbf7d0;
+      font-size: 0.8rem;
+      font-weight: 550;
+      box-shadow: 0 0 0 1px rgba(21, 128, 61, 0.4);
+      transition: background var(--transition-fast), box-shadow var(--transition-fast),
+        transform var(--transition-fast);
       white-space: nowrap;
     }
 
-    /* HERO */
-    .hero {
-      padding: 3rem 1.25rem 2.5rem;
-      text-align: left;
+    .nav-cta svg {
+      width: 14px;
+      height: 14px;
     }
 
-    .hero-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      background: radial-gradient(circle at top left, #22c55e33 0, #020617 60%);
+      box-shadow: 0 12px 30px rgba(34, 197, 94, 0.35);
+    }
+
+    .nav-cta:active {
+      transform: translateY(0);
+      box-shadow: 0 6px 18px rgba(21, 128, 61, 0.4);
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    /* Hero */
+    .hero {
+      padding: 2.5rem 0 2rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
     }
 
     .eyebrow {
-      font-size: 0.85rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.16rem 0.75rem;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      color: var(--accent-alt);
+      background: radial-gradient(circle at left, #0ea5e933 0, transparent 65%);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      margin-bottom: 1.2rem;
     }
 
-    .hero h1 {
-      font-size: clamp(2rem, 4vw, 2.75rem);
+    .eyebrow-pill {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: radial-gradient(circle at center, #22c55e, #22c55e33);
+      box-shadow: 0 0 10px rgba(34, 197, 94, 0.8);
+    }
+
+    .hero-title {
+      font-size: clamp(2.3rem, 4vw, 3rem);
       line-height: 1.1;
-      margin-bottom: 0.9rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.01em;
     }
 
-    .hero h1 span { color: var(--accent); }
-
-    .hero-sub {
-      font-size: 1.05rem;
-      max-width: 620px;
-      color: var(--muted);
-      margin-bottom: 1.75rem;
+    .hero-title span {
+      background: linear-gradient(to right, #e5e7eb, #a5b4fc);
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
-    .hero-bullets {
-      display: grid;
-      gap: 0.35rem;
-      margin-bottom: 1.75rem;
-      font-size: 0.95rem;
-      color: var(--muted);
+    .hero-subtitle {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.7;
+      max-width: 32rem;
+      margin-bottom: 1.5rem;
     }
 
-    .hero-bullets span {
-      color: var(--accent);
-      margin-right: 0.35rem;
-      font-size: 1.05rem;
+    .hero-tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-full);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(55, 65, 81, 0.95);
+      color: var(--text-muted);
+      font-size: 0.76rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-tagline span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.12);
+      color: #bbf7d0;
+      font-size: 0.65rem;
     }
 
     .hero-cta-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
       align-items: center;
+      gap: 0.9rem;
+      margin-bottom: 1.75rem;
     }
 
     .btn-primary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.8rem 1.4rem;
-      border-radius: 999px;
+      gap: 0.4rem;
+      padding: 0.7rem 1.3rem;
+      border-radius: var(--radius-full);
       border: none;
-      background: var(--accent);
-      color: #ffffff;
+      font-size: 0.9rem;
       font-weight: 600;
-      font-size: 0.95rem;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #022c22;
+      box-shadow: 0 16px 40px rgba(22, 163, 74, 0.65);
       cursor: pointer;
-      text-decoration: none;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+        filter var(--transition-fast), opacity var(--transition-fast);
+    }
+
+    .btn-primary svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.05);
+      box-shadow: 0 22px 50px rgba(22, 163, 74, 0.8);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+      box-shadow: 0 12px 30px rgba(22, 163, 74, 0.65);
     }
 
     .btn-secondary-link {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .btn-secondary-link strong {
+      color: #e5e7eb;
+    }
+
+    .hero-footnote {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hero-footnote span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .hero-footnote span::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.7);
+    }
+
+    /* Hero right card */
+    .hero-card {
+      border-radius: 20px;
+      background: radial-gradient(circle at top, #020617 0, #020617 40%, #000 100%);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: var(--shadow-soft);
+      padding: 1.5rem 1.4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 0 0, rgba(34, 197, 94, 0.08) 0, transparent 50%),
+        radial-gradient(circle at 100% 0, rgba(56, 189, 248, 0.08) 0, transparent 50%),
+        radial-gradient(circle at 50% 120%, rgba(168, 85, 247, 0.06) 0, transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      gap: 1rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0.8rem;
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .hero-badge span {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: radial-gradient(circle at center, #22c55e, #22c55e33);
+      box-shadow: 0 0 10px rgba(34, 197, 94, 0.7);
+    }
+
+    .hero-metric {
+      text-align: right;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .hero-metric strong {
+      display: block;
       font-size: 0.9rem;
-      color: var(--muted);
+      color: #e5e7eb;
     }
 
-    .btn-secondary-link strong { color: var(--text); }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.25rem;
+    }
 
-    .full-width { width: 100%; justify-content: center; }
+    .pill {
+      font-size: 0.7rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: rgba(15, 23, 42, 0.85);
+      color: var(--text-muted);
+    }
 
-    /* SECTIONS */
+    .hero-card-block {
+      margin-bottom: 1.25rem;
+      padding: 0.9rem 0.9rem;
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(31, 41, 55, 0.9);
+    }
+
+    .hero-card-block h3 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-card-block p {
+      font-size: 0.85rem;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    .hero-micro-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.55rem 1.1rem;
+      font-size: 0.75rem;
+      margin-top: 0.85rem;
+    }
+
+    .hero-micro-list span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      color: var(--text-muted);
+    }
+
+    .hero-micro-list span::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.8);
+    }
+
+    .hero-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .hero-note strong {
+      color: #e5e7eb;
+    }
+
+    /* Sections */
     section {
-      border-top: 1px solid var(--border);
-      background: var(--bg);
+      padding: 2.4rem 0 1.6rem;
     }
 
-    .section-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 2.5rem 1.25rem;
+    .section-header {
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1.25rem;
+      flex-wrap: wrap;
     }
 
     .section-title {
       font-size: 1.35rem;
-      margin-bottom: 0.35rem;
+      letter-spacing: 0.02em;
     }
 
-    .section-kicker {
+    .section-tagline {
       font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-      margin-bottom: 0.25rem;
+      color: var(--text-muted);
+      max-width: 28rem;
     }
 
-    .section-sub {
-      font-size: 0.95rem;
-      color: var(--muted);
-      max-width: 620px;
-      margin-bottom: 1.75rem;
+    /* Services */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.3rem;
     }
 
-    .grid { display: grid; gap: 1rem; }
+    @media (max-width: 900px) {
+      .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
 
-    @media (min-width: 768px) {
-      .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @media (max-width: 640px) {
+      .grid-3 {
+        grid-template-columns: minmax(0, 1fr);
+      }
     }
 
     .card {
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      padding: 1.2rem 1.1rem;
-      background: var(--card);
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top left, #020617 0, #02000b 60%);
+      border: 1px solid var(--border-subtle);
+      padding: 1.1rem 1.1rem 1.15rem;
+      box-shadow: var(--shadow-subtle);
     }
 
     .card h3 {
-      font-size: 1rem;
-      margin-bottom: 0.35rem;
+      font-size: 0.98rem;
+      margin-bottom: 0.4rem;
     }
 
     .card p {
-      font-size: 0.92rem;
-      color: var(--muted);
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 0.7rem;
     }
 
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-      margin-bottom: 0.55rem;
+    .card-meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
     }
 
-    .list-check {
-      display: grid;
-      gap: 0.3rem;
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .list-check li { list-style: none; }
-
-    .list-check li::before {
-      content: "✔";
-      color: var(--accent);
-      margin-right: 0.35rem;
-    }
-
-    .fit-list {
-      display: grid;
-      gap: 0.4rem;
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .fit-list li { list-style: none; }
-
-    .fit-list li::before {
-      content: "•";
-      margin-right: 0.35rem;
-      color: var(--accent);
-    }
-
-    /* CONTACT / REACH OUT */
-    .contact-section {
+    .chip-row {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.5rem;
+    }
+
+    .chip {
+      font-size: 0.7rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: var(--radius-full);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(31, 41, 55, 0.8);
+      color: var(--text-muted);
+    }
+
+    /* Process */
+    .process-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 1.6rem;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 900px) {
+      .process-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .steps {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 0.7rem 0.9rem;
+    }
+
+    .step-number {
+      width: 24px;
+      height: 24px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    .step h3 {
+      font-size: 0.92rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .step p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .process-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .process-note strong {
+      color: #e5e7eb;
+    }
+
+    /* Results / Testimonials */
+    .results-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 900px) {
+      .results-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .result-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    .stat {
+      flex: 1 1 120px;
+      border-radius: var(--radius-lg);
+      padding: 0.9rem;
+      border: 1px solid var(--border-subtle);
+      background: radial-gradient(circle at top, #020617 0, #02000b 70%);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .stat span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.3rem;
+      margin-top: 0.25rem;
+    }
+
+    .testimonials {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .quote {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      border-radius: var(--radius-lg);
+      padding: 0.75rem 0.9rem;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(31, 41, 55, 0.9);
+    }
+
+    .quote strong {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: #e5e7eb;
+    }
+
+    /* “How I Work” */
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 1.5rem;
     }
 
-    .contact-card {
-      max-width: 520px;
-      padding: 1.5rem 1.4rem;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: var(--card);
+    @media (max-width: 800px) {
+      .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
     }
 
-    .contact-header { max-width: 640px; }
-
-    .help-text {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 1rem;
+    .bullet-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
     }
 
+    .bullet-list li {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      display: flex;
+      gap: 0.55rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .bullet-list li::before {
+      content: "•";
+      color: var(--accent);
+      font-size: 1.1rem;
+      line-height: 1;
+      margin-top: 0.05rem;
+    }
+
+    /* FAQ */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 1.2rem;
+    }
+
+    @media (max-width: 900px) {
+      .faq-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .faq-item h3 {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .faq-item p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Contact */
+    #reach-out {
+      scroll-margin-top: 80px;
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 1.7rem;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 900px) {
+      .contact-wrap {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    form {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(31, 41, 55, 0.95);
+      background: rgba(15, 23, 42, 0.95);
+      color: #e5e7eb;
+      padding: 0.55rem 0.7rem;
+      font-size: 0.86rem;
+      outline: none;
+      transition: border var(--transition-fast), box-shadow var(--transition-fast),
+        background var(--transition-fast);
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: rgba(34, 197, 94, 0.8);
+      box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.5);
+      background: rgba(15, 23, 42, 0.98);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 640px) {
+      .field-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .form-helper {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .form-status {
+      font-size: 0.78rem;
+      margin-top: 0.4rem;
+      min-height: 1.1rem;
+    }
+
+    .form-status.error {
+      color: var(--error);
+    }
+
+    .form-status.success {
+      color: var(--success);
+    }
+
+    .contact-alt {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .contact-alt a {
+      color: var(--accent-alt);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .contact-pill {
+      margin-top: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.8rem;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      background: rgba(15, 23, 42, 0.95);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
     footer {
-      border-top: 1px solid var(--border);
-      font-size: 0.8rem;
-      color: var(--muted);
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+      padding: 1.2rem 0 1.8rem;
+      font-size: 0.76rem;
+      color: var(--text-muted);
     }
 
-    .footer-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 1.5rem 1.25rem 2rem;
+    .footer-row {
       display: flex;
       justify-content: space-between;
-      gap: 0.75rem;
+      gap: 0.8rem;
       flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer-row a {
+      color: var(--text-muted);
     }
   </style>
 </head>
 <body>
-
-<header>
-  <div class="shell nav">
-    <div class="brand">
-      YOUR<span>SEO</span>GUY
-    </div>
-    <!-- NAV REACH OUT: opens email -->
-    <a class="nav-cta" href="mailto:danny@imyourseoguy.com">
-      Reach Out
-    </a>
-  </div>
-</header>
-
-<main>
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="eyebrow">Senior-level SEO</div>
-      <h1>Smart strategy. Clean execution. <span>Real leads.</span></h1>
-      <p class="hero-sub">
-        Freelance SEO support for teams who want clear strategy, clean implementation,
-        and more qualified opportunities from search.
-      </p>
-
-      <div class="hero-bullets">
-        <div><span>■</span> Strategy that connects rankings to revenue—not vanity metrics.</div>
-        <div><span>■</span> Technical cleanup, content, and analytics in one cohesive plan.</div>
-        <div><span>■</span> A single senior partner you can actually talk to.</div>
-      </div>
-
-      <div class="hero-cta-row">
-        <!-- HERO REACH OUT: scrolls down -->
-        <a class="btn-primary" href="#reach-out">Reach Out</a>
-        <div class="btn-secondary-link">
-          Or <strong>see how I work</strong> below.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section>
-    <div class="section-inner">
-      <div class="section-kicker">What I do</div>
-      <h2 class="section-title">SEO that connects traffic to pipeline</h2>
-      <p class="section-sub">
-        I work with companies that already have something working—paid, outbound, word-of-mouth—
-        and want search to become a reliable, compounding channel instead of a black box.
-      </p>
-
-      <div class="grid grid-2">
-        <div class="card">
-          <div class="pill">Strategy</div>
-          <h3>SEO & growth roadmap</h3>
-          <p>
-            Clear, prioritized plans for what to fix, what to build, and what to ignore.
-            Built around your actual business model, not cookie-cutter checklists.
-          </p>
+  <div class="page-wrap">
+    <header>
+      <div class="inner nav-bar">
+        <div class="brand-lockup">
+          <div class="brand-mark"></div>
+          <div class="brand-text">
+            <span>I'M YOUR SEO GUY</span>
+            <span>Technical & Local SEO</span>
+          </div>
         </div>
 
-        <div class="card">
-          <div class="pill">Technical</div>
-          <h3>Technical SEO & site health</h3>
-          <p>
-            Crawling, indexation, site speed, internal links, and error cleanup so search engines
-            can actually see—and trust—your site.
-          </p>
-        </div>
+        <nav class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#process">How I Work</a>
+          <a href="#results">Proof</a>
+          <a href="#reach-out">Contact</a>
+        </nav>
 
-        <div class="card">
-          <div class="pill">Content</div>
-          <h3>Content & on-page optimization</h3>
-          <p>
-            Pages and content that match real search intent, answer real questions,
-            and move visitors toward contact, demo, or quote requests.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="pill">Analytics</div>
-          <h3>Reporting that makes sense</h3>
-          <p>
-            Tracking, dashboards, and regular reviews that explain what’s working,
-            what’s not, and what we’re testing next.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW I WORK -->
-  <section>
-    <div class="section-inner">
-      <div class="section-kicker">How I work</div>
-      <h2 class="section-title">Big-agency thinking. One senior operator.</h2>
-      <p class="section-sub">
-        Think of me as a part-time SEO lead—not another “set it and forget it” vendor.
-        I plug into your existing marketing and sales efforts, then identify where search can
-        actually move the needle.
-      </p>
-
-      <div class="grid grid-2">
-        <div>
-          <ul class="list-check">
-            <li>Deep dive into your site, analytics, and search performance.</li>
-            <li>Clear plan for technical fixes, content, and landing pages.</li>
-            <li>Work directly with your team or devs to implement changes.</li>
-            <li>Regular check-ins focused on leads and pipeline, not just clicks.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Who I’m a good fit for</h3>
-          <ul class="fit-list">
-            <li>Teams that care about quality leads, not just more traffic.</li>
-            <li>Companies that can act on recommendations and want a partner, not a task rabbit.</li>
-            <li>B2B, technical, or service-based businesses where expertise matters.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REACH OUT (EMAIL CTA) -->
-  <section id="reach-out">
-    <div class="section-inner contact-section">
-      <div class="contact-header">
-        <div class="section-kicker">Start a conversation</div>
-        <h2 class="section-title">Let’s see if we’re a good fit</h2>
-        <p class="section-sub">
-          No long forms. No automation. Just send me a short note with your website and what you’re trying to solve—
-          I’ll reply within 1 business day.
-        </p>
-      </div>
-
-      <div class="contact-card">
-        <p style="font-size:0.95rem; color:var(--muted); margin-bottom:1rem;">
-          Email me directly at:
-        </p>
-
-        <!-- BOTTOM CTA: opens email -->
-        <a class="btn-primary full-width" href="mailto:danny@imyourseoguy.com">
-          Email Me to Get Started
+        <a class="nav-cta" href="mailto:danny@imyourseoguy.com">
+          <span>Reach Out</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M5 5h14v2H7.414L19 18.586 17.586 20 6 8.414V17H4V5z"
+            />
+          </svg>
         </a>
-
-        <p class="help-text">
-          If you can, include your website, your main goal, and any timing constraints. Keep it simple—I’ll take it from there.
-        </p>
       </div>
-    </div>
-  </section>
-</main>
+    </header>
 
-<footer>
-  <div class="footer-inner">
-    <div>© <span id="year"></span> Your SEO Guy. All rights reserved.</div>
-    <div>Based online. Working with clients wherever good search traffic lives.</div>
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="inner hero-grid">
+          <div>
+            <div class="eyebrow">
+              <span class="eyebrow-pill"></span>
+              <span>No fluff. No retainers you regret. Just SEO that moves revenue.</span>
+            </div>
+            <h1 class="hero-title">
+              Local & ecommerce brands hire me when their
+              <span>SEO is stuck.</span>
+            </h1>
+            <p class="hero-subtitle">
+              I help local businesses and online stores fix the technical mess, clean up
+              local signals, and ship SEO audits that you can actually act on. No
+              vanity metrics. Just clear next steps.
+            </p>
+
+            <div class="hero-tagline">
+              <span>✓</span>
+              <span>Technical SEO • Local SEO • Site audits you can hand to devs</span>
+            </div>
+
+            <div class="hero-cta-row">
+              <a class="btn-primary" href="#reach-out">
+                <span>Get a free SEO audit outline</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M5 12h11.17l-4.58-4.59L13 6l7 7-7 7-1.41-1.41L16.17 13H5z"
+                  />
+                </svg>
+              </a>
+              <div class="btn-secondary-link">
+                Or <strong>see how I work</strong> below.
+              </div>
+            </div>
+
+            <div class="hero-footnote">
+              <span>Local & ecommerce focus</span>
+              <span>Technical, Local, and Audit-first</span>
+              <span>No long-term lock-in</span>
+            </div>
+          </div>
+
+          <aside class="hero-card" aria-label="Snapshot of how I work">
+            <div class="hero-card-inner">
+              <div class="hero-card-header">
+                <div class="hero-badge">
+                  <span></span>
+                  <span>SEO in plain English</span>
+                </div>
+                <div class="hero-metric">
+                  <span>Typical timeline</span>
+                  <strong>30–90 days</strong>
+                </div>
+              </div>
+
+              <div class="pill-row">
+                <span class="pill">Technical SEO</span>
+                <span class="pill">Local SEO</span>
+                <span class="pill">Ecommerce</span>
+                <span class="pill">Audits-only if you prefer</span>
+              </div>
+
+              <div class="hero-card-block">
+                <h3>What I actually do</h3>
+                <p>
+                  I audit your site, fix the technical debt, make your local presence
+                  coherent, and give you a priority list your devs and content team can
+                  follow without guessing.
+                </p>
+                <div class="hero-micro-list">
+                  <span>Full-site technical audits</span>
+                  <span>Local landing & GBP cleanup</span>
+                  <span>Site architecture & crawl</span>
+                  <span>Tracking & event sanity check</span>
+                </div>
+              </div>
+
+              <p class="hero-note">
+                <strong>Not</strong> an agency. You work directly with the person doing the
+                audit, fixing the issues, and answering your “what if we…” questions.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <div class="inner">
+          <div class="section-header">
+            <h2 class="section-title">What I help you fix</h2>
+            <p class="section-tagline">
+              If you’re a local business or ecommerce brand, your SEO problems usually
+              come down to a few boring-but-critical things. I focus there first.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <article class="card">
+              <h3>Technical SEO</h3>
+              <p>
+                Crawl issues, slow templates, messy internal links, weird tracking,
+                duplicate content — all the stuff that quietly kills performance while
+                reports look “fine”.
+              </p>
+              <div class="card-meta">
+                <span>Typical work:</span>
+                <div class="chip-row">
+                  <span class="chip">Crawl/index audits</span>
+                  <span class="chip">Core Web Vitals</span>
+                  <span class="chip">Site structure</span>
+                  <span class="chip">JavaScript SEO sanity check</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Local SEO</h3>
+              <p>
+                For service areas and multi-location brands: aligning your website, GBP
+                listings, and citations so Google stops guessing where you actually are
+                and what you really do.
+              </p>
+              <div class="card-meta">
+                <span>Typical work:</span>
+                <div class="chip-row">
+                  <span class="chip">GBP cleanup</span>
+                  <span class="chip">Location pages</span>
+                  <span class="chip">NAP consistency</span>
+                  <span class="chip">Review strategy</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>SEO Audits you can act on</h3>
+              <p>
+                Opinionated audits. Not 80 pages of screenshots. Clear issues, impact,
+                and recommended fixes you can plug into Monday, Asana, or Jira.
+              </p>
+              <div class="card-meta">
+                <span>Typical work:</span>
+                <div class="chip-row">
+                  <span class="chip">Priority-ranked issues</span>
+                  <span class="chip">Dev-ready tickets</span>
+                  <span class="chip">Content & UX notes</span>
+                  <span class="chip">Follow-up Q&A</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section id="process">
+        <div class="inner">
+          <div class="section-header">
+            <h2 class="section-title">How I work with you</h2>
+            <p class="section-tagline">
+              No mystery retainers. No “trust the process” while nothing moves. We
+              agree on a scope, timelines, and what success actually looks like.
+            </p>
+          </div>
+
+          <div class="process-grid">
+            <div class="steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div>
+                  <h3>Quick intro call</h3>
+                  <p>
+                    20–30 minutes to understand your site, your market, and what has
+                    (or hasn’t) been tried already. If I’m not a fit, I’ll tell you.
+                  </p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div>
+                  <h3>Audit & snapshots</h3>
+                  <p>
+                    I dig into your site, Search Console/GA4, and key tools to
+                    document what’s actually happening and where the biggest wins sit.
+                  </p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div>
+                  <h3>Impact-ranked plan</h3>
+                  <p>
+                    You get a prioritized list of technical, local, and content fixes —
+                    scoped so real humans can actually implement them.
+                  </p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div>
+                  <h3>Implementation & follow-through</h3>
+                  <p>
+                    I can work with your dev/content team to get fixes shipped, or
+                    stay on for ongoing audits and iteration. Your choice.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3 style="font-size:0.9rem; margin-bottom:0.4rem;">
+                What you can expect from me
+              </h3>
+              <p class="process-note">
+                <strong>Clear communication, no drama.</strong> I work best with teams
+                that want honest feedback, straight answers, and a shared Trello/Asana
+                board everyone can see.
+              </p>
+              <br />
+              <p class="process-note">
+                <strong>Not a black box.</strong> If I recommend something, I’ll show
+                you the why — not just “best practice” slides.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESULTS / PROOF -->
+      <section id="results">
+        <div class="inner">
+          <div class="section-header">
+            <h2 class="section-title">Proof it isn’t just theory</h2>
+            <p class="section-tagline">
+              I can’t share every client name here, but this is the type of movement
+              clients bring me in for — and what they stay for.
+            </p>
+          </div>
+
+          <div class="results-grid">
+            <div class="result-stats">
+              <div class="stat">
+                <span>Local service business</span>
+                <strong>+120%</strong>
+                <span>Organic leads in 6 months after local & technical cleanup.</span>
+              </div>
+              <div class="stat">
+                <span>Ecommerce</span>
+                <strong>+90%</strong>
+                <span>Organic revenue YoY from category and template work.</span>
+              </div>
+              <div class="stat">
+                <span>Multi-location brand</span>
+                <strong>+60%</strong>
+                <span>Clicks from “near me” terms with better location pages & GBP.</span>
+              </div>
+            </div>
+
+            <div class="testimonials">
+              <div class="quote">
+                “We stopped guessing what to fix first. The audit turned into dev
+                tickets in a week and we saw the lift a lot faster than I expected.”
+                <strong>Director of Marketing, B2B ecommerce</strong>
+              </div>
+              <div class="quote">
+                “I finally understood what was wrong with our local setup and what to
+                ask our team to do. No fluff, just a clear list.”
+                <strong>Owner, multi-location service business</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW I WORK / FIT CHECK -->
+      <section id="fit">
+        <div class="inner">
+          <div class="section-header">
+            <h2 class="section-title">Are we a good fit?</h2>
+            <p class="section-tagline">
+              I’m not trying to be the right fit for everyone. Here’s who I tend to do
+              my best work with.
+            </p>
+          </div>
+
+          <div class="two-col">
+            <div class="card">
+              <h3 style="font-size:0.95rem; margin-bottom:0.6rem;">
+                You’ll probably like working with me if…
+              </h3>
+              <ul class="bullet-list">
+                <li>You’re a local or ecommerce brand with real revenue goals.</li>
+                <li>You’d rather see a prioritized list than a 60-slide deck.</li>
+                <li>Your team can implement changes, but needs a clear path.</li>
+                <li>You’re okay with honest feedback on what’s working and what isn’t.</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3 style="font-size:0.95rem; margin-bottom:0.6rem;">
+                I’m probably not your person if…
+              </h3>
+              <ul class="bullet-list">
+                <li>You just want “more traffic” without clarity on conversions.</li>
+                <li>You want to chase every new SEO hack on Twitter this week.</li>
+                <li>You’d rather have a big agency logo in the deck than direct access to the person doing the work.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <div class="inner">
+          <div class="section-header">
+            <h2 class="section-title">A few questions you might have</h2>
+            <p class="section-tagline">
+              If we end up working together, I want you to know exactly what you’re
+              getting into — and what you’re not.
+            </p>
+          </div>
+
+          <div class="faq-grid">
+            <div class="faq-item">
+              <h3>Do you require long-term contracts?</h3>
+              <p>
+                No. Most work starts as a defined audit or project. If it makes sense,
+                we can move into ongoing support after you’ve seen the value.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>Can you work with our dev / content team?</h3>
+              <p>
+                Yes. I’m used to working inside existing workflows and tools. The
+                deliverable is something your team can plug directly into their queue.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>What does “free SEO audit outline” mean?</h3>
+              <p>
+                It’s not a full free audit. It’s a quick look at your site with a short
+                list of the main areas I’d focus on if we work together, so you can see
+                if my approach matches what you need.
+              </p>
+            </div>
+            <div class="faq-item">
+              <h3>What tools do you use?</h3>
+              <p>
+                The usual suspects: GA4, Search Console, crawlers, and supporting tools
+                for local and ecommerce. The tool is less important than getting to a
+                clear, prioritized plan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="reach-out">
+        <div class="inner">
+          <div class="section-header">
+            <h2 class="section-title">Reach out</h2>
+            <p class="section-tagline">
+              Tell me a bit about your site and what’s not working. I’ll reply with
+              next steps and whether I think I can actually help.
+            </p>
+          </div>
+
+          <div class="contact-wrap">
+            <!-- CONTACT FORM -->
+            <div class="card">
+              <form
+                id="contact-form"
+                method="POST"
+                action="https://formspree.io/f/xdkvjgwq"
+                novalidate
+              >
+                <div class="field-row">
+                  <div>
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" autocomplete="name" />
+                  </div>
+                  <div>
+                    <label for="email">Email</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="field-row">
+                  <div>
+                    <label for="website">Website</label>
+                    <input
+                      id="website"
+                      name="website"
+                      type="url"
+                      placeholder="https://example.com"
+                    />
+                  </div>
+                  <div>
+                    <label for="business-type">Business type</label>
+                    <input
+                      id="business-type"
+                      name="business_type"
+                      type="text"
+                      placeholder="Local / ecommerce / both"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label for="message">What’s not working right now?</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    placeholder="Quick context helps me give you a real answer."
+                  ></textarea>
+                </div>
+                <div class="form-helper">
+                  I read every message myself. No agency handoff.
+                </div>
+                <button class="btn-primary" type="submit">
+                  <span>Send message</span>
+                </button>
+                <div id="form-status" class="form-status" aria-live="polite"></div>
+              </form>
+            </div>
+
+            <!-- CONTACT ALT / EMAIL -->
+            <div>
+              <p class="contact-alt">
+                Prefer email? You can also reach me directly at
+                <a href="mailto:danny@imyourseoguy.com">danny@imyourseoguy.com</a>.
+              </p>
+              <p class="contact-alt" style="margin-top:0.8rem;">
+                If you include your site URL and a quick note on whether you’re local,
+                ecommerce, or both, I can usually tell you in one email whether I’m
+                likely to be the right fit.
+              </p>
+
+              <div class="contact-pill">
+                <span>Response time:</span>
+                <strong>Usually within 1–2 business days</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="inner footer-row">
+        <span>© <span id="year"></span> I'm Your SEO Guy.</span>
+        <span>
+          Built to be fast, readable, and actually useful — just like your SEO should be.
+        </span>
+      </div>
+    </footer>
   </div>
-</footer>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  <!-- Minimal JS: year + basic client-side form guard (no heavy libs) -->
+  <script>
+    // Set footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
 
+    // Basic client-side validation and UX only
+    const form = document.getElementById("contact-form");
+    const statusEl = document.getElementById("form-status");
+
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        if (!form.checkValidity()) {
+          e.preventDefault();
+          statusEl.textContent = "Please fill in the required fields before sending.";
+          statusEl.className = "form-status error";
+        } else {
+          statusEl.textContent = "Sending…";
+          statusEl.className = "form-status";
+          // Formspree handles the actual submit
+        }
+      });
+    }
+  </script>
 </body>
 </html>
