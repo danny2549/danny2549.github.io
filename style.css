@@ -53,7 +53,7 @@ p {
 h1,
 h2,
 h3 {
-  margin: 0 0 0.4rem;
+  margin: 0.4rem 0 0.4rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--text);
