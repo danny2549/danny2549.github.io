@@ -200,7 +200,7 @@ section > p {
 
 /* About */
 
-#about p:last-child {
+.about p:last-child {
   margin-bottom: 0.5rem;
 }
 
