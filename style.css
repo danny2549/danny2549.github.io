@@ -65,7 +65,7 @@ body > header,
 body > section,
 body > footer {
   max-width: var(--max-width);
-  margin: 0 auto;
+  margin: 0.4rem auto;
   padding: 0 1.5rem;
 }
 
