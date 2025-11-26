@@ -9,68 +9,87 @@
 
 <body>
   <section id="hero">
-    <h1>Danny Gallagher</h1>
-    <h2>SEO & Digital Strategy Consultant</h2>
-    <p>I help B2B brands generate measurable growth using organic search and user-focused strategy.</p>
-    <a href="#contact">Reach Out!</a>
+    <div class="section-card hero-card">
+      <h1>Danny Gallagher</h1>
+      <h2>SEO & Digital Strategy Consultant</h2>
+      <p>I help B2B brands generate measurable growth using organic search and user-focused strategy.</p>
+      <a class="cta-contact" href="#contact">Reach Out!</a>
+    </div>
   </section>
 
   <section id="about">
-    <h2>About</h2>
-    <p>
-      I specialize in helping technical, complex, and niche industries generate qualified traffic and conversions through data-driven SEO, analytics, and performance-focused content.
-    </p>
-    <p>
-      My work focuses on scalable landing pages, product/service clarity, content structure, and conversion optimization that solves real business problems.
-    </p>
+    <div class="section-card">
+      <h2>About</h2>
+      <p>
+        I specialize in helping technical, complex, and niche industries generate qualified traffic and conversions through data-driven SEO, analytics, and performance-focused content.
+      </p>
+      <p>
+        My work focuses on scalable landing pages, product/service clarity, content structure, and conversion optimization that solves real business problems.
+      </p>
+    </div>
   </section>
 
   <section id="services">
-    <h2>Services</h2>
-    <ul>
-      <li>SEO Strategy & Roadmapping</li>
-      <li>Content Architecture & Site Structure</li>
-      <li>Technical SEO for Large Sites</li>
-      <li>Analytics & KPI Dashboards</li>
-      <li>Conversion-Focused Copywriting</li>
-    </ul>
+    <div class="section-card">
+      <h2>Services</h2>
+      <ul>
+        <li>SEO Strategy & Roadmapping</li>
+        <li>Content Architecture & Site Structure</li>
+        <li>Technical SEO for Large Sites</li>
+        <li>Analytics & KPI Dashboards</li>
+        <li>Conversion-Focused Copywriting</li>
+      </ul>
+    </div>
   </section>
 
   <section id="work">
-    <h2>Selected Work</h2>
- <div class="work-grid">
-      <div>
-        <h3>Transcat</h3>
-        <p>SEO strategy and scalable architecture for calibration services and technical equipment. Created 300+ high-value pages and analytics reporting.</p>
-      </div>
+    <div class="section-card">
+      <h2>Selected Work</h2>
+      <div class="work-grid">
+        <div>
+          <h3>Transcat</h3>
+          <p>SEO strategy and scalable architecture for calibration services and technical equipment. Created 300+ high-value pages and analytics reporting.</p>
+        </div>
 
-      <div>
-        <h3>Axiom Test Equipment</h3>
-        <p>Lead generation growth for high-value electronics rental and sales using category segmentation and long-tail content strategy.</p>
-      </div>
+        <div>
+          <h3>Axiom Test Equipment</h3>
+          <p>Lead generation growth for high-value electronics rental and sales using category segmentation and long-tail content strategy.</p>
+        </div>
 
-      <div>
-        <h3>Pipettes.com</h3>
-        <p>Full SEO rework of calibration and laboratory equipment services, including service-focused landing pages and product content structure.</p>
+        <div>
+          <h3>Pipettes.com</h3>
+          <p>Full SEO rework of calibration and laboratory equipment services, including service-focused landing pages and product content structure.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="contact">
-    <h3>Contact</h3>
-    <p>Interested in working together? You can fill out the form or email me at <a href="mailto:danny@imyourseoguy.com">danny@imyourseoguy.com</a></p>
-    <form action="https://formspree.io/f/xdkvjgwq" method="post">
-      <label>Your Name</label><br>
-      <input type="text" name="name"><br><br>
+    <div class="section-card contact-card">
+      <h3>Contact</h3>
+      <p>Interested in working together? You can fill out the form or email me at <a href="mailto:danny@imyourseoguy.com">danny@imyourseoguy.com</a></p>
+      <form action="https://formspree.io/f/xdkvjgwq" method="post">
+        <div class="form-row">
+          <label for="name">Your Name</label>
+          <input id="name" type="text" name="name">
+        </div>
 
-      <label>Your Email</label><br>
-      <input type="email" name="email"><br><br>
+        <div class="form-row">
+          <label for="email">Your Email</label>
+          <input id="email" type="email" name="email">
+        </div>
 
-      <label>Project Details</label><br>
-      <textarea name="message"></textarea><br><br>
+        <div class="form-row full">
+          <label for="message">Project Details</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
 
-      <button type="submit">Send</button>
-    </form>
+        <div class="form-actions">
+          <button type="submit">Send</button>
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
   </section>
 
   <footer>
