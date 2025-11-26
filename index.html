@@ -2,35 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>I'm Your SEO Guy | Technical & Local SEO for Businesses</title>
+  <title>I'm Your SEO Guy | Technical & Local SEO for Local & Ecommerce Brands</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Practical technical SEO, local SEO, and SEO audits for local businesses and ecommerce brands."
+    content="Clear, practical technical and local SEO for local and ecommerce brands. Focused audits, simple plans, and steady support."
   />
+
+  <!-- Sora font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg-page: #f5f5f7;
       --bg-surface: #ffffff;
-      --bg-soft: #f1f5f9;
+      --bg-soft: #f9fafb;
+      --bg-soft-blue: #e0f2fe;
+
       --border-subtle: #e2e8f0;
 
-      --text-main: #111827;
+      --text-main: #0f172a;
       --text-muted: #4b5563;
       --text-soft: #6b7280;
 
-      --accent: #16a34a;
-      --accent-soft: #dcfce7;
-      --accent-alt: #0ea5e9;
+      --accent: #2563eb;       /* primary blue */
+      --accent-light: #dbeafe; /* light blue tint */
+      --accent-soft: #eff6ff;  /* softer blue background */
 
-      --radius-lg: 14px;
+      --radius-md: 3px;
+      --radius-lg: 12px;
       --radius-full: 999px;
 
       --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
-      --shadow-subtle: 0 6px 16px rgba(15, 23, 42, 0.06);
+      --shadow-subtle: 0 6px 16px rgba(15, 23, 42, 0.05);
 
-      --max-width: 1024px;
+      --max-width: 1040px;
       --transition-fast: 150ms ease-out;
     }
 
@@ -47,8 +55,7 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
+      font-family: "Sora", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--bg-page);
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
@@ -60,7 +67,7 @@
     }
 
     main {
-      padding-bottom: 4rem;
+      padding-bottom: 3.5rem;
     }
 
     .page-wrap {
@@ -100,18 +107,15 @@
     }
 
     .brand-mark {
-      width: 32px;
-      height: 32px;
-      border-radius: 9px;
-      background: linear-gradient(135deg, #16a34a, #0ea5e9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #f9fafb;
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      letter-spacing: 0.1em;
-      box-shadow: 0 6px 16px rgba(22, 163, 74, 0.4);
+      letter-spacing: 0.08em;
+      padding: 0.4rem 0.6rem;
+      border-radius: var(--radius-md);
+      background: var(--accent);
+      color: #f9fafb;
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+      text-transform: uppercase;
     }
 
     .brand-text {
@@ -121,9 +125,9 @@
     }
 
     .brand-text span:first-child {
-      font-weight: 650;
-      letter-spacing: 0.08em;
-      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      font-size: 0.82rem;
       text-transform: uppercase;
     }
 
@@ -165,13 +169,13 @@
       display: inline-flex;
       align-items: center;
       gap: 0.3rem;
-      padding: 0.45rem 0.9rem;
+      padding: 0.45rem 0.95rem;
       border-radius: var(--radius-full);
-      border: 1px solid rgba(22, 163, 74, 0.2);
+      border: 1px solid rgba(37, 99, 235, 0.25);
       background: #ffffff;
-      color: #065f46;
+      color: #1e3a8a;
       font-size: 0.8rem;
-      font-weight: 550;
+      font-weight: 500;
       box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
       transition: background var(--transition-fast), box-shadow var(--transition-fast),
         transform var(--transition-fast);
@@ -185,8 +189,8 @@
 
     .nav-cta:hover {
       transform: translateY(-1px);
-      background: #ecfdf3;
-      box-shadow: 0 6px 16px rgba(22, 163, 74, 0.18);
+      background: var(--accent-soft);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.16);
     }
 
     @media (max-width: 720px) {
@@ -197,32 +201,25 @@
 
     /* Hero */
     .hero {
-      padding: 2.75rem 0 2.25rem;
+      padding: 2.4rem 0 2.2rem;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 2.5rem;
-      align-items: center;
-    }
-
-    @media (max-width: 900px) {
-      .hero-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
+    .hero-inner {
+      text-align: center;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 0.45rem;
-      padding: 0.2rem 0.8rem;
+      gap: 0.5rem;
+      padding: 0.2rem 0.9rem;
       border-radius: var(--radius-full);
-      font-size: 0.72rem;
-      color: #065f46;
-      background: #ecfdf3;
-      border: 1px solid #bbf7d0;
+      font-size: 0.75rem;
+      color: #1d4ed8;
+      background: var(--accent-light);
+      border: 1px solid #bfdbfe;
       margin-bottom: 1.1rem;
     }
 
@@ -230,36 +227,36 @@
       width: 8px;
       height: 8px;
       border-radius: 999px;
-      background: #16a34a;
+      background: var(--accent);
     }
 
     .hero-title {
-      font-size: clamp(2.1rem, 3.4vw, 2.7rem);
+      font-size: clamp(2rem, 3.4vw, 2.6rem);
       line-height: 1.1;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.8rem;
       letter-spacing: 0.01em;
     }
 
     .hero-title span {
-      color: #047857;
+      color: #1d4ed8;
     }
 
     .hero-subtitle {
       color: var(--text-muted);
       font-size: 0.98rem;
       line-height: 1.7;
-      max-width: 32rem;
-      margin-bottom: 1.25rem;
+      max-width: 34rem;
+      margin: 0 auto 1.4rem;
     }
 
     .hero-tagline {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      padding: 0.35rem 0.75rem;
+      padding: 0.35rem 0.85rem;
       border-radius: var(--radius-full);
-      background: var(--bg-soft);
-      border: 1px solid var(--border-subtle);
+      background: var(--bg-soft-blue);
+      border: 1px solid var(--accent-light);
       color: var(--text-soft);
       font-size: 0.78rem;
       margin-bottom: 1.4rem;
@@ -272,8 +269,8 @@
       width: 16px;
       height: 16px;
       border-radius: 999px;
-      background: var(--accent-soft);
-      color: #166534;
+      background: #1d4ed8;
+      color: #eff6ff;
       font-size: 0.7rem;
     }
 
@@ -281,8 +278,9 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      justify-content: center;
       gap: 0.9rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.4rem;
     }
 
     .btn-primary {
@@ -290,14 +288,14 @@
       align-items: center;
       justify-content: center;
       gap: 0.4rem;
-      padding: 0.7rem 1.25rem;
-      border-radius: var(--radius-full);
+      padding: 0.75rem 1.35rem;
+      border-radius: var(--radius-md);
       border: none;
       font-size: 0.9rem;
       font-weight: 600;
-      background: #16a34a;
+      background: var(--accent);
       color: #f9fafb;
-      box-shadow: 0 12px 28px rgba(22, 163, 74, 0.3);
+      box-shadow: 0 12px 28px rgba(37, 99, 235, 0.3);
       cursor: pointer;
       transition: transform var(--transition-fast), box-shadow var(--transition-fast),
         filter var(--transition-fast);
@@ -311,11 +309,11 @@
     .btn-primary:hover {
       transform: translateY(-1px);
       filter: brightness(1.02);
-      box-shadow: 0 16px 34px rgba(22, 163, 74, 0.35);
+      box-shadow: 0 16px 34px rgba(37, 99, 235, 0.35);
     }
 
     .btn-secondary-link {
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       color: var(--text-soft);
     }
 
@@ -324,12 +322,14 @@
     }
 
     .hero-footnote {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--text-soft);
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 0.5rem;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
     }
 
     .hero-footnote span {
@@ -346,51 +346,53 @@
       background: #9ca3af;
     }
 
-    /* Hero right card */
-    .hero-card {
-      border-radius: 18px;
-      background: var(--bg-surface);
+    .hero-bottom-card {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: left;
+      border-radius: var(--radius-lg);
+      background: var(--bg-soft);
       border: 1px solid var(--border-subtle);
-      box-shadow: var(--shadow-soft);
-      padding: 1.25rem 1.2rem;
+      box-shadow: var(--shadow-subtle);
+      padding: 1.1rem 1.2rem 1.2rem;
     }
 
     .hero-card-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 0.9rem;
       gap: 1rem;
+      margin-bottom: 0.7rem;
     }
 
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      padding: 0.3rem 0.8rem;
-      background: var(--bg-soft);
+      padding: 0.3rem 0.75rem;
       border-radius: var(--radius-full);
-      border: 1px solid var(--border-subtle);
+      background: #e5f0ff;
+      border: 1px solid #cbd5f5;
       font-size: 0.74rem;
-      color: var(--text-soft);
+      color: #1d4ed8;
     }
 
     .hero-badge span {
       width: 7px;
       height: 7px;
       border-radius: 999px;
-      background: #16a34a;
+      background: #1d4ed8;
     }
 
     .hero-metric {
       text-align: right;
-      font-size: 0.75rem;
+      font-size: 0.76rem;
       color: var(--text-soft);
     }
 
     .hero-metric strong {
       display: block;
-      font-size: 0.9rem;
+      font-size: 0.86rem;
       color: var(--text-main);
     }
 
@@ -402,8 +404,8 @@
     .hero-card-block p {
       font-size: 0.86rem;
       color: var(--text-soft);
-      line-height: 1.6;
-      margin-bottom: 0.7rem;
+      line-height: 1.7;
+      margin-bottom: 0.65rem;
     }
 
     .hero-micro-list {
@@ -415,18 +417,30 @@
     }
 
     .hero-note {
-      font-size: 0.78rem;
+      margin-top: 0.8rem;
+      font-size: 0.8rem;
       color: var(--text-soft);
-      margin-top: 0.9rem;
     }
 
     .hero-note strong {
       color: var(--text-main);
     }
 
+    @media (max-width: 640px) {
+      .hero-micro-list {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
     /* Sections */
     section {
-      padding: 2.3rem 0 1.6rem;
+      padding: 2.3rem 0 1.8rem;
+    }
+
+    .section--alt {
+      background: var(--bg-soft);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
     }
 
     .section-header {
@@ -435,11 +449,11 @@
       justify-content: space-between;
       gap: 1.25rem;
       flex-wrap: wrap;
-      align-items: baseline;
+      align-items: flex-start;
     }
 
     .section-title {
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       letter-spacing: 0.01em;
     }
 
@@ -454,7 +468,7 @@
       border-radius: var(--radius-lg);
       background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
-      padding: 1.1rem 1.1rem 1.2rem;
+      padding: 1.1rem 1.1rem 1.15rem;
       box-shadow: var(--shadow-subtle);
     }
 
@@ -473,7 +487,7 @@
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.25rem;
+      gap: 1.2rem;
     }
 
     @media (max-width: 900px) {
@@ -504,9 +518,9 @@
       font-size: 0.72rem;
       padding: 0.18rem 0.55rem;
       border-radius: var(--radius-full);
-      background: var(--bg-soft);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-soft);
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-light);
+      color: #1e40af;
     }
 
     /* Process */
@@ -569,7 +583,7 @@
       color: var(--text-main);
     }
 
-    /* Results / Testimonials */
+    /* Results */
     .results-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
@@ -633,7 +647,7 @@
       color: var(--text-main);
     }
 
-    /* “Fit” */
+    /* Fit section */
     .two-col {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -724,7 +738,7 @@
     input,
     textarea {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 8px;
       border: 1px solid var(--border-subtle);
       background: #ffffff;
       color: var(--text-main);
@@ -737,8 +751,8 @@
 
     input:focus,
     textarea:focus {
-      border-color: #16a34a;
-      box-shadow: 0 0 0 1px rgba(22, 163, 74, 0.2);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.2);
       background: #f9fafb;
     }
 
@@ -785,7 +799,7 @@
     }
 
     .contact-alt a {
-      color: var(--accent-alt);
+      color: var(--accent);
       text-decoration: underline;
       text-decoration-thickness: 1px;
       text-underline-offset: 3px;
@@ -799,7 +813,7 @@
       padding: 0.35rem 0.8rem;
       border-radius: var(--radius-full);
       border: 1px solid var(--border-subtle);
-      background: var(--bg-soft);
+      background: var(--bg-soft-blue);
       font-size: 0.8rem;
       color: var(--text-soft);
     }
@@ -811,6 +825,7 @@
       font-size: 0.78rem;
       color: var(--text-soft);
       margin-top: auto;
+      background: var(--bg-surface);
     }
 
     .footer-row {
@@ -841,7 +856,7 @@
           <a href="#reach-out">Contact</a>
         </nav>
 
-        <a class="nav-cta" href="mailto:danny@imyourseoguy.com">
+        <a class="nav-cta" href="#reach-out">
           <span>Reach out</span>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
@@ -856,54 +871,52 @@
     <main>
       <!-- HERO -->
       <section class="hero" id="top">
-        <div class="inner hero-grid">
-          <div>
-            <div class="eyebrow">
-              <span class="eyebrow-pill"></span>
-              <span>Technical & local SEO for teams that want clear next steps.</span>
-            </div>
-            <h1 class="hero-title">
-              I help local and ecommerce brands
-              <span>make sense of SEO.</span>
-            </h1>
-            <p class="hero-subtitle">
-              If your site is hard to understand, slow to navigate, or unclear in search,
-              I help you untangle the technical pieces and strengthen your local presence
-              so more of the right people find you.
-            </p>
+        <div class="inner hero-inner">
+          <div class="eyebrow">
+            <span class="eyebrow-pill"></span>
+            <span>Technical & local SEO for teams that want clear next steps.</span>
+          </div>
 
-            <div class="hero-tagline">
-              <span>✓</span>
-              <span>Technical SEO · Local SEO · Practical audits you can act on</span>
-            </div>
+          <h1 class="hero-title">
+            I help local and ecommerce brands<br />
+            <span>make sense of SEO.</span>
+          </h1>
 
-            <div class="hero-cta-row">
-              <a class="btn-primary" href="#reach-out">
-                <span>Start with a short conversation</span>
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    fill="currentColor"
-                    d="M5 12h11.17l-4.58-4.59L13 6l7 7-7 7-1.41-1.41L16.17 13H5z"
-                  />
-                </svg>
-              </a>
-              <div class="btn-secondary-link">
-                Or <strong>see how I work</strong> below.
-              </div>
-            </div>
+          <p class="hero-subtitle">
+            If search feels noisy or confusing, I help you see what matters, fix what’s blocking growth, and give your team a simple plan to follow.
+          </p>
 
-            <div class="hero-footnote">
-              <span>Local & ecommerce focus</span>
-              <span>Technical, local, and audit work</span>
-              <span>Direct access, no account layers</span>
+          <div class="hero-tagline">
+            <span>✓</span>
+            <span>Technical SEO · Local SEO · Audits you can actually use</span>
+          </div>
+
+          <div class="hero-cta-row">
+            <a class="btn-primary" href="#reach-out">
+              <span>Start with a short conversation</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M5 12h11.17l-4.58-4.59L13 6l7 7-7 7-1.41-1.41L16.17 13H5z"
+                />
+              </svg>
+            </a>
+            <div class="btn-secondary-link">
+              Or <strong>see how I work</strong> below.
             </div>
           </div>
 
-          <aside class="hero-card" aria-label="Snapshot of how I work">
+          <div class="hero-footnote">
+            <span>Local & ecommerce focus</span>
+            <span>Technical, local, and audit work</span>
+            <span>Direct access, no account layers</span>
+          </div>
+
+          <div class="hero-bottom-card">
             <div class="hero-card-header">
               <div class="hero-badge">
                 <span></span>
-                <span>Clear, straightforward SEO support</span>
+                <span>How projects usually start</span>
               </div>
               <div class="hero-metric">
                 <span>Typical engagement</span>
@@ -912,36 +925,32 @@
             </div>
 
             <div class="hero-card-block">
-              <h3>Where I usually start</h3>
+              <h3>Start with a focused SEO review</h3>
               <p>
-                Most projects begin with a focused audit across technical, local, and
-                analytics. The outcome is a prioritised list of changes your team can
-                move on without guesswork.
+                We look at how your site is built, how people find you now, and where search is leaving money on the table. The outcome is a short, ranked list of things to fix first.
               </p>
               <div class="hero-micro-list">
                 <span>Technical health & crawling</span>
-                <span>Local signals & pages</span>
+                <span>Local pages & GBP setup</span>
                 <span>Search Console & GA4 checks</span>
-                <span>Simple, ordered next steps</span>
+                <span>Clear, ordered next steps</span>
               </div>
             </div>
 
             <p class="hero-note">
-              You work directly with me throughout the project — from first call to
-              recommendations and follow-up.
+              <strong>You work directly with me</strong> throughout the project — from first call to recommendations and follow-up.
             </p>
-          </aside>
+          </div>
         </div>
       </section>
 
       <!-- SERVICES -->
-      <section id="services">
+      <section id="services" class="section--alt">
         <div class="inner">
           <div class="section-header">
             <h2 class="section-title">What I help you improve</h2>
             <p class="section-tagline">
-              For most local and ecommerce teams, a few specific areas usually unlock
-              clearer results. I focus there first.
+              Most results come from getting a few fundamentals right. I focus there before anything else.
             </p>
           </div>
 
@@ -949,13 +958,12 @@
             <article class="card">
               <h3>Technical SEO</h3>
               <p>
-                Make it easier for search engines to understand and crawl your site,
-                and easier for people to use it.
+                Make it easier for search engines and people to use your site. We clean up structure, speed, and crawl issues that quietly hold you back.
               </p>
               <div class="card-meta">
                 <span>Typical work:</span>
                 <div class="chip-row">
-                  <span class="chip">Crawl & index audits</span>
+                  <span class="chip">Crawl & index checks</span>
                   <span class="chip">Site structure</span>
                   <span class="chip">Core Web Vitals</span>
                   <span class="chip">JavaScript SEO checks</span>
@@ -966,8 +974,7 @@
             <article class="card">
               <h3>Local SEO</h3>
               <p>
-                Make sure your website, Google Business Profile, and key listings tell
-                a consistent story about who you are and where you work.
+                Make sure your website, Google Business Profile, and key listings all tell the same clear story about who you are and where you work.
               </p>
               <div class="card-meta">
                 <span>Typical work:</span>
@@ -983,14 +990,13 @@
             <article class="card">
               <h3>SEO audits you can use</h3>
               <p>
-                Focused audits with a clear order of operations, written so you can
-                hand items straight to dev and content teams.
+                Opinionated audits written for real teams. You get a ranked list of items that can be dropped straight into your project tool.
               </p>
               <div class="card-meta">
                 <span>Typical work:</span>
                 <div class="chip-row">
                   <span class="chip">Impact-ranked issues</span>
-                  <span class="chip">Dev-ready tickets</span>
+                  <span class="chip">Dev-ready tasks</span>
                   <span class="chip">Content opportunities</span>
                   <span class="chip">Follow-up support</span>
                 </div>
@@ -1006,8 +1012,7 @@
           <div class="section-header">
             <h2 class="section-title">How we work together</h2>
             <p class="section-tagline">
-              Simple, transparent steps so you know what’s happening and why at each
-              stage.
+              Simple steps so you always know what’s happening and why.
             </p>
           </div>
 
@@ -1018,8 +1023,7 @@
                 <div>
                   <h3>Brief intro call</h3>
                   <p>
-                    A short call to understand your site, goals, and what’s already in
-                    motion. If I don’t think I’m a good fit, I’ll say so.
+                    A short conversation to understand your site, goals, and current efforts. If I’m not the right fit, I’ll say so.
                   </p>
                 </div>
               </div>
@@ -1028,8 +1032,7 @@
                 <div>
                   <h3>Audit & review</h3>
                   <p>
-                    I dig into your site, analytics, and search data to see where the
-                    main opportunities and blockers are.
+                    I dig into your site, analytics, and search data to find the main blockers and quick wins.
                   </p>
                 </div>
               </div>
@@ -1038,8 +1041,7 @@
                 <div>
                   <h3>Prioritised plan</h3>
                   <p>
-                    You receive clear, ordered recommendations across technical, local,
-                    and content work, scoped for real teams and timelines.
+                    You get a clear, ordered list of recommendations across technical, local, and content work.
                   </p>
                 </div>
               </div>
@@ -1048,8 +1050,7 @@
                 <div>
                   <h3>Support during implementation</h3>
                   <p>
-                    I stay available to answer questions, review changes, and adjust as
-                    we see how search and users respond.
+                    I stay available to answer questions, review changes, and adjust based on how search and users respond.
                   </p>
                 </div>
               </div>
@@ -1060,27 +1061,24 @@
                 What you can expect
               </h3>
               <p class="process-note">
-                <strong>Plain-language explanations.</strong> I aim to make the work
-                understandable to both marketing and technical teams.
+                <strong>Plain-language explanations.</strong> The work is written so marketing, product, and dev teams can all follow it.
               </p>
               <br />
               <p class="process-note">
-                <strong>Calm, consistent communication.</strong> You’ll know what I’m
-                working on and when to expect updates.
+                <strong>Steady communication.</strong> You’ll know what I’m working on and when to expect updates.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- RESULTS / PROOF -->
-      <section id="results">
+      <!-- RESULTS -->
+      <section id="results" class="section--alt">
         <div class="inner">
           <div class="section-header">
-            <h2 class="section-title">Examples of the kind of movement I work on</h2>
+            <h2 class="section-title">The kind of movement I aim for</h2>
             <p class="section-tagline">
-              Specific numbers vary by client, but these are representative of the type
-              of impact previous projects have seen.
+              Results change by client, but these are typical of projects I take on.
             </p>
           </div>
 
@@ -1089,30 +1087,27 @@
               <div class="stat">
                 <span>Local service business</span>
                 <strong>+120%</strong>
-                <span>Increase in organic enquiries over 6 months after technical and local updates.</span>
+                <span>More organic enquiries in 6 months after technical and local updates.</span>
               </div>
               <div class="stat">
-                <span>Ecommerce</span>
+                <span>Ecommerce brand</span>
                 <strong>+90%</strong>
-                <span>Increase in organic revenue year-on-year from work on category pages and templates.</span>
+                <span>Year-on-year organic revenue growth from better category and template work.</span>
               </div>
               <div class="stat">
-                <span>Multi-location brand</span>
+                <span>Multi-location business</span>
                 <strong>+60%</strong>
-                <span>More clicks from “near me” searches with clearer location pages and better GBP setup.</span>
+                <span>Increase in clicks from “near me” searches with stronger location pages and GBP setup.</span>
               </div>
             </div>
 
             <div class="testimonials">
               <div class="quote">
-                “The audit gave us a clear order of work instead of a long list of
-                ‘nice-to-haves’. Our dev team knew exactly what to do next.”
+                “The audit gave us a clear order of work instead of a long list of ‘nice-to-haves’. Our dev team knew exactly what to do next.”
                 <strong>Director of Marketing, B2B ecommerce</strong>
               </div>
               <div class="quote">
-                “We finally understood what was holding our local presence back, and
-                how to explain it internally. The recommendations were practical and
-                realistic for our team.”
+                “We finally understood what was holding our local presence back, and how to explain it internally. The plan was clear and realistic for our team.”
                 <strong>Owner, multi-location service business</strong>
               </div>
             </div>
@@ -1126,8 +1121,7 @@
           <div class="section-header">
             <h2 class="section-title">Who I tend to work best with</h2>
             <p class="section-tagline">
-              A good fit usually comes down to expectations and how your team prefers
-              to work.
+              Fit usually comes down to expectations and how your team likes to work.
             </p>
           </div>
 
@@ -1139,19 +1133,19 @@
               <ul class="bullet-list">
                 <li>You’re a local or ecommerce brand with clear revenue or lead goals.</li>
                 <li>Your team can ship changes but wants a confident plan to follow.</li>
-                <li>You appreciate honest, evidence-based recommendations.</li>
-                <li>You value steady, sustainable improvements over quick tricks.</li>
+                <li>You prefer honest, evidence-based recommendations over buzzwords.</li>
+                <li>You care more about steady, sustainable gains than quick tricks.</li>
               </ul>
             </div>
 
             <div class="card">
               <h3 style="font-size:0.95rem; margin-bottom:0.5rem;">
-                It may not be the right fit if…
+                It might not be the right fit if…
               </h3>
               <ul class="bullet-list">
-                <li>Success is defined only as “more traffic” without a clear outcome.</li>
-                <li>You’re mainly looking to test many short-term SEO experiments.</li>
-                <li>You prefer a large agency structure with multiple layers of contact.</li>
+                <li>Success is only defined as “more traffic”, without a clear outcome.</li>
+                <li>You mainly want to test lots of short-term SEO hacks.</li>
+                <li>You’d rather work through multiple agency layers instead of directly with the person doing the work.</li>
               </ul>
             </div>
           </div>
@@ -1159,12 +1153,12 @@
       </section>
 
       <!-- FAQ -->
-      <section id="faq">
+      <section id="faq" class="section--alt">
         <div class="inner">
           <div class="section-header">
             <h2 class="section-title">Questions you might have</h2>
             <p class="section-tagline">
-              A few common points that usually come up in early conversations.
+              A few things that often come up early on.
             </p>
           </div>
 
@@ -1172,31 +1166,25 @@
             <div class="faq-item card">
               <h3>Do you work on long-term retainers?</h3>
               <p>
-                Most work starts as a defined project or audit. If it’s useful, we can
-                discuss light ongoing support once you’ve seen how we work together.
+                Most projects start as a defined audit or scoped engagement. If it’s useful, we can talk about ongoing support once you’ve seen how we work together.
               </p>
             </div>
             <div class="faq-item card">
               <h3>Can you work with our existing dev and content teams?</h3>
               <p>
-                Yes. I aim to make recommendations that fit into existing workflows and
-                tools, so work can move without friction.
+                Yes. Recommendations are written to fit the tools and processes your teams already use, so work can move without re-inventing everything.
               </p>
             </div>
             <div class="faq-item card">
-              <h3>What does an “audit” include?</h3>
+              <h3>What does an audit include?</h3>
               <p>
-                A typical audit covers technical foundations, local signals, analytics
-                basics, and key content opportunities, with an ordered list of next
-                actions.
+                A typical audit covers technical foundations, local signals, analytics basics, and key content opportunities, all ordered by impact and effort.
               </p>
             </div>
             <div class="faq-item card">
               <h3>What tools do you use?</h3>
               <p>
-                I work with GA4, Search Console, crawlers, and supporting tools for
-                local and ecommerce. The focus is on what those tools reveal about
-                what to do next for your site.
+                I work with GA4, Search Console, crawlers, and tools for local and ecommerce. The tools matter less than what they tell us to do next.
               </p>
             </div>
           </div>
@@ -1209,8 +1197,7 @@
           <div class="section-header">
             <h2 class="section-title">Reach out</h2>
             <p class="section-tagline">
-              Share a little context about your site and what you’d like to improve.
-              I’ll respond with next steps and whether I think I’m a good fit to help.
+              Share a short overview of your site and what you’d like to improve. I’ll respond with next steps and whether I’m a good fit to help.
             </p>
           </div>
 
@@ -1269,8 +1256,7 @@
                   ></textarea>
                 </div>
                 <div class="form-helper">
-                  Messages come directly to me. I don’t forward them on to a separate
-                  team.
+                  Messages come directly to me. I don’t forward them to a separate team.
                 </div>
                 <button class="btn-primary" type="submit">
                   <span>Send message</span>
@@ -1286,8 +1272,7 @@
                 <a href="mailto:danny@imyourseoguy.com">danny@imyourseoguy.com</a>.
               </p>
               <p class="contact-alt" style="margin-top:0.8rem;">
-                Including your site URL, your role, and whether you’re local, ecommerce
-                or both helps me respond with something specific and useful.
+                Including your site URL, your role, and whether you’re local, ecommerce or both helps me respond with something specific and useful.
               </p>
 
               <div class="contact-pill">
