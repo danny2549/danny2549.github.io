@@ -254,11 +254,11 @@ section > p {
 
 /* About */
 
-.about {
+.service {
   gap: 0.5rem;
 }
 
-.about p:last-child {
+.service p:last-child {
   margin-bottom: 0.5rem;
 }
 
