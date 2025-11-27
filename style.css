@@ -123,8 +123,7 @@ header nav a:focus-visible {
 /* Hero */
 
 #hero {
-  padding: 4.5rem 0 3rem;
-  padding-bottom: 0px;
+  padding: 4.5rem 0 1.5rem;
 }
 
 #hero .section-card {
