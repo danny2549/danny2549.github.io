@@ -65,7 +65,7 @@ body > header,
 body > section,
 body > footer {
   max-width: var(--max-width);
-  margin: 2rem auto; /* Increased top and bottom margin to 2rem */
+  margin: 1.75rem auto;
   padding: 0 1.5rem;
 }
 
@@ -92,14 +92,15 @@ header {
     rgba(245, 247, 251, 0.85),
     transparent
   );
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
 }
 
 header nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 1.75rem;
-  padding: 1.1rem 0;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 0.65rem 0;
   font-size: 0.9rem;
 }
 
@@ -118,6 +119,22 @@ header nav a:hover,
 header nav a:focus-visible {
   color: var(--accent);
   border-color: var(--accent-soft);
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  width: 120px;
+  max-width: 130px;
+  height: auto;
+}
+
+.nav-contact {
+  font-weight: 600;
+  color: var(--accent);
 }
 
 /* Hero */
@@ -336,6 +353,20 @@ footer {
   border-top: 1px solid rgba(226, 232, 240, 0.8);
 }
 
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.55rem;
+}
+
+.footer-logo-img {
+  width: 110px;
+  max-width: 45%;
+  height: auto;
+  opacity: 0.24;
+  filter: grayscale(100%);
+}
+
 /* Smooth scrolling for anchors */
 
 html {
@@ -346,8 +377,8 @@ html {
 
 @media (max-width: 800px) {
   header nav {
-    justify-content: center;
-    gap: 1.25rem;
+    justify-content: space-between;
+    gap: 1rem;
   }
 
   section {
