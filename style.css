@@ -144,6 +144,13 @@ header nav a:focus-visible {
 }
 
 #hero .section-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 2.2rem;
+}
+
+.hero-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -154,6 +161,7 @@ header nav a:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  max-width: 700px;
 }
 
 #hero h1 {
@@ -205,6 +213,7 @@ header nav a:focus-visible {
   border: 3px solid var(--accent-soft);
   box-shadow: var(--shadow-soft);
   flex-shrink: 0;
+  justify-self: end;
 }
 
 .hero-portrait img {
@@ -409,6 +418,7 @@ html {
   }
 
   #hero .section-card {
+    grid-template-columns: 1fr;
     flex-direction: column;
     align-items: flex-start;
   }
