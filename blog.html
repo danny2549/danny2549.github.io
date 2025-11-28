@@ -1,1 +1,24 @@
+---
+layout: default
+title: "Blog | I'm Your SEO Guy"
+---
+
+<section class="section-card">
+  <h1>Blog</h1>
+  <p>Daily notes on SEO, experiments, and what’s actually moving the needle.</p>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li class="post-list-item">
+        <a href="{{ post.url | relative_url }}">
+          <h2>{{ post.title }}</h2>
+        </a>
+        <small>{{ post.date | date: "%B %d, %Y" }}</small>
+        {% if post.excerpt %}
+          <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
 
