@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | I'm Your SEO Guy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- Simple header/nav -->
+  <header class="site-header">
+    <a href="/" class="site-title">I'm Your SEO Guy</a>
+    <nav class="site-nav">
+      <a href="/#hero">Home</a>
+      <a href="/blog">Blog</a>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Danny Gallagher. All rights reserved.</p>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
 
