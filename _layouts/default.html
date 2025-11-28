@@ -144,15 +144,19 @@
           <img src="/IMYOURSEOGUY_LOGO_V2%20(1).png" alt="I'm Your SEO Guy logo" class="brand-logo">
         </a>
       </div>
-      <!-- keep this exactly so your JS selector a[href="#contact"] still works -->
+
       <a class="nav-contact" href="#contact">Contact</a>
       <a class="nav-contact" href="/blog">Blog</a>
     </nav>
   </header>
 
-  {{ content }}
+  <main>
+    {{ content }}
+  </main>
 
-  <footer>
+  {% include footer.html %}
+
+  <footer class="site-footer-meta">
     <div class="footer-logo">
       <img src="/IMYOURSEOGUY_LOGO_V2%20(1).png" alt="I'm Your SEO Guy logo" class="footer-logo-img">
     </div>
