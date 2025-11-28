@@ -142,7 +142,8 @@
       <div class="brand-mark">
         <img src="/IMYOURSEOGUY_LOGO_V2%20(1).png" alt="I'm Your SEO Guy logo" class="brand-logo">
       </div>
-      <a class="nav-contact" href="/#contact">Contact</a>
+      <!-- keep this exactly so your JS selector a[href="#contact"] still works -->
+      <a class="nav-contact" href="#contact">Contact</a>
       <a class="nav-contact" href="/blog">Blog</a>
     </nav>
   </header>
@@ -153,7 +154,7 @@
     <div class="footer-logo">
       <img src="/IMYOURSEOGUY_LOGO_V2%20(1).png" alt="I'm Your SEO Guy logo" class="footer-logo-img">
     </div>
-    <p>© 2025 Danny Gallagher. All Rights Reserved.</p>
+    <p>© <span id="year"></span> Danny Gallagher. All Rights Reserved.</p>
   </footer>
 
   <script src="/script.js" defer></script>
