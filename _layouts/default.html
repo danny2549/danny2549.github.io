@@ -1,21 +1,31 @@
-<body>
-  <header>
-    <nav>
-      <div class="brand-mark">
-        <a href="https://www.imyourseoguy.com">
-          <img src="/IMYOURSEOGUY_LOGO_V2%20(1).png" alt="I'm Your SEO Guy logo" class="brand-logo">
-        </a>
-      </div>
-      <a class="nav-contact" href="#contact">Contact</a>
-      <a class="nav-contact" href="/blog">Blog</a>
-    </nav>
-  </header>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.excerpt | strip_html | default: site.description }}">
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="brand-mark">
+          <a href="https://www.imyourseoguy.com">
+            <img src="/IMYOURSEOGUY_LOGO_V2%20(1).png" alt="I'm Your SEO Guy logo" class="brand-logo">
+          </a>
+        </div>
+        <a class="nav-contact" href="#contact">Contact</a>
+        <a class="nav-contact" href="/blog">Blog</a>
+      </nav>
+    </header>
 
-  <main class="page-wrap">
-    {{ content }}
-  </main>
+    <main class="page-wrap">
+      {{ content }}
+    </main>
 
-  {% include footer.html %}
+    {% include footer.html %}
 
-  <script src="/script.js" defer></script>
-</body>
+    <script src="/script.js" defer></script>
+  </body>
+</html>
