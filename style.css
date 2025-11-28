@@ -140,7 +140,7 @@ header nav a:focus-visible {
 /* Hero */
 
 #hero {
-  padding: 4.5rem 0 1.5rem;
+  padding: 4.5rem 1.5rem 1.5rem;
 }
 
 #hero .section-card {
@@ -234,7 +234,7 @@ header nav a:focus-visible {
 /* Sections */
 
 section {
-  padding: 2.75rem 0;
+  padding: 2.75rem 1.5rem;
 }
 
 section:not(#hero) {
@@ -430,7 +430,7 @@ html {
   }
 
   section {
-    padding: 2.2rem 0;
+    padding: 2.2rem 1.25rem;
   }
 
   #hero .section-card {
