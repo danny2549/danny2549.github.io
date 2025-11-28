@@ -1,141 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKYH3WG9WN"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MKYH3WG9WN');
-  </script>
-
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "ucg6ydjzv4");
-  </script>
-
-  <!-- Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://imyourseoguy.com/#website",
-        "url": "https://imyourseoguy.com/",
-        "name": "imyourseoguy.com",
-        "inLanguage": "en-US",
-        "publisher": {
-          "@id": "https://imyourseoguy.com/#person"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://imyourseoguy.com/#webpage",
-        "url": "https://imyourseoguy.com/",
-        "name": "Danny Gallagher | SEO & Digital Strategy Specialist",
-        "isPartOf": {
-          "@id": "https://imyourseoguy.com/#website"
-        }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://imyourseoguy.com/#person",
-        "name": "Danny Gallagher",
-        "jobTitle": "SEO & Digital Strategy Specialist",
-        "description": "Freelance SEO specialist focused on local SEO, technical SEO, ecommerce SEO, and analytics-driven content strategy.",
-        "url": "https://imyourseoguy.com/",
-        "email": "mailto:danny@imyourseoguy.com",
-        "knowsAbout": [
-          "Local SEO",
-          "Technical SEO",
-          "Ecommerce SEO",
-          "Content strategy",
-          "Data analysis",
-          "Google Analytics",
-          "Google Tag Manager",
-          "Google Ads"
-        ]
-      },
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://imyourseoguy.com/#business",
-        "name": "I'm Your SEO Guy",
-        "url": "https://imyourseoguy.com/",
-        "description": "Freelance SEO consultancy providing local SEO, technical SEO, ecommerce SEO, and implementation support.",
-        "provider": {
-          "@id": "https://imyourseoguy.com/#person"
-        },
-        "areaServed": {
-          "@type": "Country",
-          "name": "United States"
-        },
-        "priceRange": "$$",
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "contactType": "sales",
-            "email": "mailto:danny@imyourseoguy.com"
-          }
-        ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "SEO Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "name": "Local SEO",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Local SEO",
-                "description": "Local landing pages, Google Business Profile optimization, review strategy and map pack tracking."
-              }
-            },
-            {
-              "@type": "Offer",
-              "name": "Technical SEO",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Technical SEO",
-                "description": "Crawl and indexation fixes, site architecture, redirects, and Core Web Vitals improvements."
-              }
-            },
-            {
-              "@type": "Offer",
-              "name": "Ecommerce SEO & Content Strategy",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Ecommerce SEO & Content Strategy",
-                "description": "Category and product page optimization, search intent mapping, and scalable content frameworks."
-              }
-            },
-            {
-              "@type": "Offer",
-              "name": "SEO Implementation & Tracking",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "SEO Implementation & Tracking",
-                "description": "GA4 and GTM setup, technical fixes, content deployment, and ongoing performance tracking."
-              }
-            }
-          ]
-        }
-      }
-    ]
-  }
-  </script>
-
-  <link rel="stylesheet" href="/style.css">
-  <meta charset="UTF-8">
-  <title>{{ page.title | default: "Danny Gallagher | SEO & Digital Strategy Specialist" }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
 <body>
   <header>
     <nav>
@@ -144,25 +6,16 @@
           <img src="/IMYOURSEOGUY_LOGO_V2%20(1).png" alt="I'm Your SEO Guy logo" class="brand-logo">
         </a>
       </div>
-
       <a class="nav-contact" href="#contact">Contact</a>
       <a class="nav-contact" href="/blog">Blog</a>
     </nav>
   </header>
 
-  <main>
+  <main class="page-wrap">
     {{ content }}
   </main>
 
   {% include footer.html %}
 
-  <footer class="site-footer-meta">
-    <div class="footer-logo">
-      <img src="/IMYOURSEOGUY_LOGO_V2%20(1).png" alt="I'm Your SEO Guy logo" class="footer-logo-img">
-    </div>
-    <p>© <span id="year"></span> Danny Gallagher. All Rights Reserved.</p>
-  </footer>
-
   <script src="/script.js" defer></script>
 </body>
-</html>
