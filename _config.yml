@@ -1,1 +1,9 @@
+title: "I'm Your SEO Guy"
+description: "SEO & Digital Strategy Specialist"
+baseurl: "" # leave empty for root domain
+url: "https://imyourseoguy.com"
+
+# Markdown & permalinks
+markdown: kramdown
+permalink: /blog/:title/
 
