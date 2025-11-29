@@ -79,6 +79,27 @@ body > footer {
 
 }
 
+.content-page {
+  display: grid;
+  gap: 1.25rem;
+  line-height: 1.65;
+}
+
+.content-page h2 {
+  margin: 0;
+}
+
+.content-page h3 {
+  margin-top: 1.5rem;
+  color: var(--heading);
+}
+
+.content-page p + h3,
+.content-page ul + h3,
+.content-page ol + h3 {
+  margin-top: 2rem;
+}
+
 /* Header / Nav */
 
 header {

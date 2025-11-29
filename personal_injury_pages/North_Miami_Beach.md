@@ -1,3 +1,11 @@
+---
+layout: default
+title: "Personal Injury Law in North Miami Beach, Florida"
+permalink: /personal_injury_pages/North_Miami_Beach/
+---
+
+<section class="section-card content-page">
+
 ## Personal Injury Law in North Miami Beach, Florida
 
 At our referral resource, we pair North Miami Beach residents with experienced local personal injury attorneys. Our organization isn't itself a law firm; rather, we are a zero‑cost referral program that helps injured individuals find the right counsel for their needs. This page will provide an overview of Florida personal injury law.
@@ -127,3 +135,5 @@ In Florida, strict filing deadlines apply to personal injury cases.  Most neglig
 Finally, being injured in North Miami Beach or anywhere in Miami-Dade County can be overwhelming, but you don’t have to deal with the aftermath alone.  Our referral network is ready to connect you with personal injury attorneys who understand Florida law and the needs of the local community.  Whether your case involves a traffic collision, a fall at a local business, a defective product, or any other kind of injury, we can direct you to lawyers who will fight for full compensation.  Acting quickly is crucial so that evidence can be preserved and statutory deadlines are met.  Our service will help you secure benefits allowed under Florida law—covering medical bills, lost wages, and compensation for pain and suffering—while holding wrongdoers accountable.  
 
 **Disclaimer:** We are a referral service, not a law firm.  This information is provided for general purposes only.  Always consult a qualified attorney for advice tailored to your situation.
+
+</section>
