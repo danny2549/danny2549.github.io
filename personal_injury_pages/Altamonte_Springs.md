@@ -1,3 +1,11 @@
+---
+layout: default
+title: "Personal Injury Law in Altamonte Springs, Florida"
+permalink: /personal_injury_pages/Altamonte_Springs/
+---
+
+<section class="section-card content-page">
+
 ## Personal Injury Law in Altamonte Springs, Florida
 
 At our free referral directory, we match Altamonte Springs residents with experienced local personal injury attorneys. Our organization doesn't operate as a law firm; rather, we are a free‑of‑charge directory that helps injured individuals find the right counsel for their needs. This page will describe how injury claims unfold under Florida statutes.
@@ -127,3 +135,5 @@ In Florida, strict filing deadlines apply to personal injury cases.  Most neglig
 In conclusion, being injured in Altamonte Springs or anywhere in Seminole County can be overwhelming, but you shouldn’t navigate recovery by yourself.  Our referral network is ready to connect you with personal injury attorneys who understand Florida law and the needs of the local community.  Whether your case involves a traffic collision, a fall at a local business, a defective product, or any other kind of injury, we can direct you to lawyers who will fight for full compensation.  Acting quickly is crucial so that evidence can be preserved and statutory deadlines are met.  Our service will help you secure benefits allowed under Florida law—covering medical bills, lost wages, and compensation for pain and suffering—while holding wrongdoers accountable.  
 
 **Disclaimer:** We are a referral service, not a law firm.  This information is provided for general purposes only.  Always consult a qualified attorney for advice tailored to your situation.
+
+</section>
