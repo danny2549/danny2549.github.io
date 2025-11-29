@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<section class="section-card">
+
+  <p><strong>Note:</strong> This is a marketing experiment. If you are interested in learning more about my marketing practices, please reach out by completing the form below or contacting me at <a href="mailto:danny@imyourseoguy.com">danny@imyourseoguy.com</a>.</p>
+
+  {{ content }}
+</section>
+
+{% assign canonical = site.url | append: page.url %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "{{ canonical }}#article",
+  "headline": "{{ page.title | escape }}",
+  "description": "Personal injury law overview and attorney referral information for {{ page.city }}, Florida. This page is part of a marketing experiment.",
+  "author": {
+    "@type": "Person",
+    "name": "Danny Gallagher",
+    "email": "mailto:danny@imyourseoguy.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ canonical }}"
+  }
+}
+</script>
